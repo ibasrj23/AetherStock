@@ -77,86 +77,96 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .change-password-container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 420px;
+            margin: 40px auto;
+            padding: 32px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
         }
         .change-password-container h2 {
             text-align: center;
-            margin-bottom: 30px;
-            color: #333;
+            margin-bottom: 28px;
+            color: var(--dark);
+            font-size: 24px;
+            font-weight: 700;
         }
         .form-group {
             margin-bottom: 20px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            color: #555;
-            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 14px;
         }
         .form-group input {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
             box-sizing: border-box;
             font-size: 14px;
+            font-family: inherit;
+            transition: var(--transition);
+            background: white;
         }
         .form-group input:focus {
             outline: none;
-            border-color: #4CAF50;
-            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         }
         .btn {
             width: 100%;
             padding: 12px;
-            background-color: #4CAF50;
+            background: var(--primary);
             color: white;
             border: none;
-            border-radius: 3px;
-            font-size: 16px;
+            border-radius: 8px;
+            font-size: 14px;
             cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-bottom: 10px;
         }
         .btn:hover {
-            background-color: #45a049;
+            background: var(--primary-dark);
+            transform: translateY(-2px);
         }
         .btn-secondary {
-            background-color: #666;
-            margin-top: 10px;
+            background: var(--text-light);
         }
         .btn-secondary:hover {
-            background-color: #555;
+            background: var(--text);
         }
         .success-message {
-            background-color: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 3px;
+            background: #f0fdf4;
+            color: #166534;
+            padding: 16px;
+            border-radius: 8px;
             margin-bottom: 20px;
-            border: 1px solid #c3e6cb;
+            border-left: 4px solid var(--success);
+            font-size: 14px;
         }
         .error-message {
-            background-color: #f8d7da;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 3px;
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 16px;
+            border-radius: 8px;
             margin-bottom: 20px;
-            border: 1px solid #f5c6cb;
+            border-left: 4px solid var(--danger);
+            font-size: 14px;
         }
         .back-link {
             text-align: center;
             margin-top: 20px;
         }
         .back-link a {
-            color: #4CAF50;
+            color: var(--primary);
             text-decoration: none;
             font-size: 14px;
+            font-weight: 600;
         }
         .back-link a:hover {
             text-decoration: underline;

@@ -24,4 +24,15 @@ CREATE TABLE IF NOT EXISTS products (
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
+-- Membuat tabel transaksi
+CREATE TABLE IF NOT EXISTS transaksi (
+  id_transaksi INT AUTO_INCREMENT PRIMARY KEY,
+  id_barang INT NOT NULL,
+  jenis_transaksi ENUM('masuk', 'keluar') NOT NULL,
+  jumlah_barang INT NOT NULL,
+  tanggal_transaksi TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  keterangan TEXT,
+  FOREIGN KEY (id_barang) REFERENCES products(id) ON DELETE CASCADE
+);
+
 

@@ -58,6 +58,7 @@ foreach ($products as $product) {
             </div>
             <div class="navbar-menu">
                 <span class="user-info">Welcome, <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong></span>
+                <a href="profile.php" class="btn btn-primary">👤 Profil</a>
                 <a href="change_password.php" class="btn btn-info">🔐 Ubah Password</a>
                 <a href="logout.php" class="btn btn-danger">Logout</a>
             </div>
@@ -67,7 +68,10 @@ foreach ($products as $product) {
     <div class="container">
         <div class="header-section">
             <h2>Dashboard Produk</h2>
-            <a href="add_product.php" class="btn btn-success">+ Tambah Produk</a>
+            <div style="display: flex; gap: 10px;">
+                <a href="add_product.php" class="btn btn-success">+ Tambah Produk</a>
+                <a href="transaction_history.php" class="btn btn-primary">📊 Riwayat Transaksi</a>
+            </div>
         </div>
 
         <div class="stats-container">
@@ -123,6 +127,7 @@ foreach ($products as $product) {
                                 <td>Rp <?php echo number_format($product['price'] * $product['quantity'], 0, ',', '.'); ?></td>
                                 <td><?php echo htmlspecialchars(substr($product['description'], 0, 30)); ?></td>
                                 <td class="action-buttons">
+                                    <a href="transaction_input.php?id=<?php echo $product['id']; ?>" class="btn btn-sm btn-primary">📝 Transaksi</a>
                                     <a href="edit_product.php?id=<?php echo $product['id']; ?>" class="btn btn-sm btn-info">Edit</a>
                                     <a href="javascript:void(0);" onclick="deleteProduct(<?php echo $product['id']; ?>)" class="btn btn-sm btn-danger">Hapus</a>
                                 </td>
