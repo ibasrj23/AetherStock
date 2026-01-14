@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Product Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .welcome-box {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            padding: 50px 40px;
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #3498db;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .description {
+            color: #2c3e50;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .features {
+            text-align: left;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .feature-item {
+            padding: 10px;
+            color: #2c3e50;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-item::before {
+            content: "✅";
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 150px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #ecf0f1;
+            color: #2c3e50;
+            border: 2px solid #3498db;
+        }
+        
+        .btn-secondary:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        .info-box {
+            background: #e8f8f5;
+            border-left: 4px solid #2ecc71;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 13px;
+            color: #16a085;
+        }
+        
+        .info-box strong {
+            color: #0f7860;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #bdc3c7;
+            margin: 30px 0;
+        }
+        
+        .credentials {
+            background: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 13px;
+            color: #7a6000;
+        }
+        
+        .credentials strong {
+            color: #d68910;
+        }
+        
+        .code {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 600px) {
+            .welcome-box {
+                padding: 30px 20px;
+            }
+            
+            .logo {
+                font-size: 40px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-box">
+            <div class="logo">📦</div>
+            <h1>Product Management System</h1>
+            <p class="subtitle">Sistem CRUD untuk Manajemen Produk dengan PHP & MySQL</p>
+            
+            <div class="description">
+                Selamat datang! Sistem ini memungkinkan Anda untuk mengelola produk dengan mudah. 
+                Fitur lengkap termasuk login, create, read, update, delete, dan validasi quantity.
+            </div>
+            
+            <div class="features">
+                <div class="feature-item">Login & Authentication</div>
+                <div class="feature-item">CRUD Operations</div>
+                <div class="feature-item">Validasi Quantity</div>
+                <div class="feature-item">Responsive Design</div>
+                <div class="feature-item">Dashboard</div>
+                <div class="feature-item">Security</div>
+            </div>
+            
+            <div class="buttons">
+                <a href="setup.php" class="btn btn-primary">🚀 Setup Database</a>
+                <a href="login.php" class="btn btn-secondary">🔐 Login</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="credentials">
+                <strong>📝 Demo Credentials:</strong><br>
+                Username: <span class="code">user1</span><br>
+                Password: <span class="code">password123</span>
+            </div>
+            
+            <div class="info-box">
+                <strong>💡 First Time?</strong><br>
+                1. Klik "Setup Database" untuk membuat database otomatis<br>
+                2. Login dengan kredensial di atas<br>
+                3. Mulai gunakan sistem!
+            </div>
+        </div>
+    </div>
+</body>
+</html>
